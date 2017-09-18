@@ -28,6 +28,21 @@ public class Sha1Util {
 		return String.valueOf(System.currentTimeMillis() / 1000);
 	}
 
+	public static String createSHA1Sign(SortedMap<String, String> signParams) throws Exception {
+		StringBuffer sb = new StringBuffer();
+		Set<Entry<String, String>> es = signParams.entrySet();
+		Iterator<Entry<String, String>> it = es.iterator();
+		while (it.hasNext()) {
+			Entry<String, String> entry =it.next();
+			String k = entry.getKey();
+			String v = entry.getValue();
+			sb.append(k + "=" + v + "&");
+			//要采用URLENCODER的原始值！
+		}
+		String params = sb.substring(0, sb.lastIndexOf("&"));
+		return getSha1(params);
+	}
+
 	//Sha1签名
 	public static String getSha1(String str,String charSet) {
 		if (str == null || str.length() == 0) {
