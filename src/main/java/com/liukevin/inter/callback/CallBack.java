@@ -1,4 +1,4 @@
-package com.liukevin.util.inter.callback;
+package com.liukevin.inter.callback;
 
 import java.util.Map;
 
