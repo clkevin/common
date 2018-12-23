@@ -3,13 +3,13 @@ package com.liukevin.inter.callback;
 import java.util.Map;
 
 /**
- * »Øµ÷·½·¨
+ * å›è°ƒæ–¹æ³•
  * Created by liukai on 2017/9/24.
  */
 public interface CallBack {
 
     /**
-     * Èë²ÎÎªmapµÄ»Øµ÷·½·¨
+     * å…¥å‚ä¸ºmapçš„å›è°ƒæ–¹æ³•
      * @param resultMap
      */
     void callBack(Map<String, String> resultMap);
